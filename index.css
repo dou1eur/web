@@ -93,18 +93,17 @@ header{
 }
 .hero-links{
 	display:flex;
-	transition: all 0.5s ease;
 }
-.hero-links:hover{
-	color:#edc7b7;
 
-}
 .hero-links-item{
 	margin-right: 10px;
 	font-size: 30px;
 	color:#ac3b61;
+	transition: color 0.2s;
 }
-
+.hero-links-item:hover{
+	color:#14110f;
+}
 .footer-title{
 	margin-top: 20px;
 	color:#123c69;
