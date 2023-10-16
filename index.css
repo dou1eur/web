@@ -1,31 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic);
+*, *:before, *:after {
+   transition: .3s linear;
+}
 html{
-	background-color: #a9ae6e62;
+	background-color: #eee2dc;
+}
+a{
+	text-decoration: none;
+	color:#123c69;
+	font-size:20px;
 }
 ul{
 	list-style: none;
-	margin:0;
+	margin:10 auto;
 	padding-left:0;
 }
+h1{
+	margin: 0;
+	font-size: 40px;
+}
+h2{
+	font-size: 35px;
+}
+header{
+	background-color:#e3bfaf;
+}
+
 .header{
 	text-align: center;
-	color:#2a2b2c;
-	font-family: 'Bebas Neue', sans-serif;
+	color:#123c69;
+	font-family:'Didact Gothic', sans-serif;
 }
 .site-navigation{
 	display:flex;
 	width:100%;
 }
 .site-navigation-item{
-	font-family: 'Bebas Neue', sans-serif;
+	font-family: 'PT Sans Caption', sans-serif;
 	color:#05386B;
 	flex-basis:50%;
+	background-color:#d8b5a6;
 }
 .hero-box{
 	display: inline-block;
-	border-radius: 70%;
+	border-radius: 60%;
 	overflow: hidden;
 	width: 400px;
 	height: 400px;
+	margin-top:45px ;
+	margin-bottom:5px ;
+	padding-bottom: 0;
 }
 .hero-box img{
   width:100%;
@@ -41,8 +65,48 @@ ul{
 
 .hero-container{
 	display:grid;
-	grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+	grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
 	grid-gap:50px;
 }
+.hero-about{
+	display:flex;
+	flex-direction: column;
+	width: 150% ;
+	min-width: 900px;
+}
+.hero{
+	color: #123c69;
+	padding-top:30px;
+	padding-bottom: 20px;
+	font-family: 'Roboto Slab', serif;
+	width: auto;
+}
+.hero-title{
+	font-size: 40px;
+	margin-top: 40px;
+}
+.hero-description{
+	margin-top:5px;
+	color:#10365e;
+	font-size: 25px;
+	margin-bottom: 0;
+}
+.hero-links{
+	display:flex;
+	transition: all 0.5s ease;
+}
+.hero-links:hover{
+	color:#edc7b7;
 
+}
+.hero-links-item{
+	margin-right: 10px;
+	font-size: 30px;
+	color:#ac3b61;
+}
 
+.footer-title{
+	margin-top: 20px;
+	color:#123c69;
+	font-family: 'PT Sans Caption', sans-serif;
+}
