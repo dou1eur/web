@@ -2,6 +2,15 @@
 *, *:before, *:after {
    transition: .3s linear;
 }
+main{
+	display:grid;
+	gap:20px 20px;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-areas:
+		'header header'
+		'hero-about hero-about'
+		'footer footer';
+}
 html{
 	background-color: #eee2dc;
 }
@@ -12,7 +21,6 @@ a{
 }
 ul{
 	list-style: none;
-	margin:10 auto;
 	padding-left:0;
 }
 h1{
@@ -26,7 +34,9 @@ header{
 	background-color:#e3bfaf;
 }
 
-.header{
+
+header{
+	grid-area:header;
 	text-align: center;
 	color:#123c69;
 	font-family:'Didact Gothic', sans-serif;
@@ -39,17 +49,23 @@ header{
 	font-family: 'PT Sans Caption', sans-serif;
 	color:#05386B;
 	flex-basis:50%;
+	
+}
+.site-navigation-item:hover{
 	background-color:#d8b5a6;
+}
+.site-navigation-item:hover:before{
+	transform: scale(1.1);
+	opacity:1;
 }
 .hero-box{
 	display: inline-block;
 	border-radius: 60%;
 	overflow: hidden;
-	width: 400px;
-	height: 400px;
-	margin-top:45px ;
-	margin-bottom:5px ;
-	padding-bottom: 0;
+	display: flex;
+	flex-basis: 150%;
+	margin-top: 50px;
+	margin-right: 20px;
 }
 .hero-box img{
   width:100%;
@@ -62,25 +78,21 @@ header{
 	margin:0;
 	padding: 0 15px;
 }
-
-.hero-container{
-	display:grid;
-	grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
-	grid-gap:50px;
+.about-me{
+	display:flex;
+	align-content: center;
+	flex-basis: 40%;
 }
 .hero-about{
-	display:flex;
-	flex-direction: column;
-	width: 150% ;
+	grid-area: hero-about;
+	width: 90%;
 	min-width: 900px;
-}
-.hero{
-	color: #123c69;
-	padding-top:30px;
-	padding-bottom: 20px;
 	font-family: 'Roboto Slab', serif;
-	width: auto;
+	color: #123c69;
+	display:flex;
+	margin: auto;
 }
+
 .hero-title{
 	font-size: 40px;
 	margin-top: 40px;
@@ -108,4 +120,7 @@ header{
 	margin-top: 20px;
 	color:#123c69;
 	font-family: 'PT Sans Caption', sans-serif;
+}
+footer{
+	grid-area: footer;
 }
