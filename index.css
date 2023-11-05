@@ -4,12 +4,14 @@
 }
 main{
 	display:grid;
-	gap:20px 20px;
+	gap:30px 20px;
 	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: auto-fit;
 	grid-template-areas:
 		'header header'
 		'hero-about hero-about'
 		'footer footer';
+	min-width: 900px;
 }
 html{
 	background-color: #eee2dc;
@@ -66,6 +68,7 @@ header{
 	flex-basis: 150%;
 	margin-top: 50px;
 	margin-right: 20px;
+	min-width: 20%;
 }
 .hero-box img{
   width:100%;
@@ -82,11 +85,13 @@ header{
 	display:flex;
 	align-content: center;
 	flex-basis: 40%;
+	width:20vw;
+	font-size:10vw;
 }
 .hero-about{
 	grid-area: hero-about;
-	width: 90%;
-	min-width: 900px;
+	width: 80%;
+	height:100%;
 	font-family: 'Roboto Slab', serif;
 	color: #123c69;
 	display:flex;
@@ -123,4 +128,5 @@ header{
 }
 footer{
 	grid-area: footer;
+	margin-top:30px;
 }
