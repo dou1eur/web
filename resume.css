@@ -9,9 +9,9 @@ main{
 	grid-template-rows: auto-fit;
 	grid-template-areas:
 		'header header'
-		'hero-about hero-about'
+		'resume resume'
 		'footer footer';
-	min-width: 890px;
+	min-width: 900px;
 }
 html{
 	background-color: #eee2dc;
@@ -35,8 +35,40 @@ h2{
 header{
 	background-color:#e3bfaf;
 }
+.text {
+    display:flex;
+    flex-direction:column;
+}
+.resume{
+    grid-area:resume;
+    display:flex;
+    font-family: 'Roboto Slab', serif;
+    color:#123c69;
+    flex-direction: column;
+    flex: auto auto auto;
+    margin-left:10px;
+}
 
-
+.first{
+    display:flex;
+    margin:5px;
+    flex-direction: column;
+}
+.second{
+    display:flex;
+    margin:5px;
+    flex-direction: column;
+}
+.third{
+    display:flex;
+    margin:5px;
+    flex-direction: column;
+}
+.fourth{
+    display:flex;
+    margin:5px;
+    flex-direction: column;
+}
 header{
 	grid-area:header;
 	text-align: center;
@@ -59,43 +91,6 @@ header{
 .site-navigation-item:hover:before{
 	transform: scale(1.1);
 	opacity:1;
-}
-.hero-box{
-	display: inline-block;
-	border-radius: 60%;
-	overflow: hidden;
-	display: flex;
-	flex-basis: 150%;
-	margin-top: 50px;
-	margin-right: 20px;
-	min-width: 20%;
-}
-.hero-box img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-}
-.container{
-	max-width:1230px;
-	width: 100%;
-	margin:0;
-	padding: 0 15px;
-}
-.about-me{
-	display:flex;
-	align-content: center;
-	flex-basis: 40%;
-	width:20vw;
-	font-size:10vw;
-}
-.hero-about{
-	grid-area: hero-about;
-	width: 80%;
-	height:100%;
-	font-family: 'Roboto Slab', serif;
-	color: #123c69;
-	display:flex;
-	margin: auto;
 }
 
 .hero-title{
@@ -128,5 +123,5 @@ header{
 }
 footer{
 	grid-area: footer;
-	margin-top:30px;
+
 }
